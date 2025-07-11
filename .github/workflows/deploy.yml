@@ -51,5 +51,5 @@ jobs:
           port: 10022
           username: root
           password: wuxi@lianyun.cn
-          local_path: './dist/*'
+          local_path: '.docs:/.vitepress/dist/*'
           remote_path: '/usr/app/www/'
