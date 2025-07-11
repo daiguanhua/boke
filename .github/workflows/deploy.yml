@@ -33,10 +33,10 @@ jobs:
           # username: ${{ secrets.SSH_USERNAME }}
           # key: ${{ secrets.KEY }}
           # password: ${{ secrets.KEY }}
-          host: 103.255.203.166
-          port: 10022
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
           username: root
-          password: wuxi@lianyun.cn
+          password: ${{ SSH_POSSWORD }}
           # 先用 SSH 命令删除旧文件
           script: |
             rm -rf /usr/app/www/*
@@ -47,9 +47,9 @@ jobs:
           # server: ${{ secrets.SSH_HOST }}
           # username: ${{ secrets.SSH_USERNAME }}
           # ssh_private_key: ${{ secrets.KEY }}
-          server: 103.255.203.166
-          port: 10022
+          server: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
           username: root
-          password: wuxi@lianyun.cn
+          password: ${{ SSH_POSSWORD }}
           local_path: './docs:/.vitepress/dist/*'
           remote_path: '/usr/app/www/'
