@@ -36,7 +36,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           username: root
-          password: ${{ SSH_POSSWORD }}
+          password: ${{ secrets.SSH_POSSWORD }}
           # 先用 SSH 命令删除旧文件
           script: |
             rm -rf /usr/app/www/*
@@ -50,6 +50,6 @@ jobs:
           server: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           username: root
-          password: ${{ SSH_POSSWORD }}
+          password: ${{ secrets.SSH_POSSWORD }}
           local_path: './docs:/.vitepress/dist/*'
           remote_path: '/usr/app/www/'
