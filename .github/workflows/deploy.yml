@@ -42,7 +42,7 @@ jobs:
             rm -rf /usr/app/www/*
 
       - name: 部署到服务器
-        uses: wlixcc/SFTP-Deploy-Action@v1.0 # 这个是sftp插件
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4 # 这个是sftp插件
         with:
           # server: ${{ secrets.SSH_HOST }}
           # username: ${{ secrets.SSH_USERNAME }}

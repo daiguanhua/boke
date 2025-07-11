@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Silence111121212222111ddddd22d"
-  text: "A VitePress Site2121"
+  text: "A VitePress Site2122221"
   tagline: My great project tagline
   actions:
     - theme: brand
