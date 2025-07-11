@@ -27,7 +27,7 @@ jobs:
 
       - name: SSH 命令删除旧文件
         uses: appleboy/ssh-action@master
-        with:
+        env:
           # 这里配置对应仓库设置的变量，就可以避免服务器配置暴露
           # host: ${{ secrets.SSH_HOST }}
           # username: ${{ secrets.SSH_USERNAME }}
@@ -43,7 +43,7 @@ jobs:
 
       - name: 部署到服务器
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4 # 这个是sftp插件
-        with:
+        env:
           # server: ${{ secrets.SSH_HOST }}
           # username: ${{ secrets.SSH_USERNAME }}
           # ssh_private_key: ${{ secrets.KEY }}
