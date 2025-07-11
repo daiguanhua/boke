@@ -8,7 +8,7 @@ on:
     #   - README.md
     #   - LICENSE
     paths: # 指定哪些文件改变时触发
-      - docs:/**
+      - docs/**
       - package.json
 
 jobs:
@@ -51,5 +51,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: root
           password: ${{ secrets.SSH_POSSWORD }}
-          local_path: './docs:/.vitepress/dist/*'
+          local_path: './docs/.vitepress/dist/*'
           remote_path: '/usr/app/www/'

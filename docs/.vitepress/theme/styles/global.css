@@ -1,0 +1,55 @@
+@import './rewrite.css';
+
+:root {
+  --border-color-1: rgb(242, 243, 245);
+  --black-color-1: rgb(60, 60, 67);
+  --grey-color-1: rgb(134, 144, 156);
+  --grey-color-2: rgb(229, 230, 235);
+  --blue-color-1: rgb(22, 93, 255);
+  --border-radius: 8px;
+  img {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+  }
+  .vp-doc {
+    h2:first-of-type {
+      margin: 10px 0 16px;
+      padding-top: 15px;
+    }
+  }
+  .VPHome {
+    margin-bottom: 23px;
+  }
+}
+
+.dark {
+  --border-color-1: rgba(255, 255, 255, 0.08);
+  --black-color-1: rgba(255, 255, 255, 0.9);
+  --grey-color-1: rgba(255, 255, 255, 0.5);
+  --grey-color-2: rgb(72, 72, 73);
+  --blue-color-1: rgb(60, 126, 255);
+}
+
+/* 黑暗模式切换动画 */
+::view-transition-old(*) {
+  animation: none;
+}
+::view-transition-new(*) {
+  animation: globalDark 0.6s ease-in;
+  -webkit-animation: globalDark 0.6s ease-in;
+}
+
+@keyframes globalDark {
+  from {
+    clip-path: circle(0% at var(--darkX) var(--darkY));
+  }
+  to {
+    clip-path: circle(100% at var(--darkX) var(--darkY));
+  }
+}
+
+/* 黑暗模式下图片低亮度化 */
+.dark img {
+  filter: brightness(0.8);
+}
