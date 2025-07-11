@@ -34,6 +34,7 @@ jobs:
           # key: ${{ secrets.KEY }}
           # password: ${{ secrets.KEY }}
           host: 103.255.203.166
+          port: 10022
           username: root
           password: wuxi@lianyun.cn
           # 先用 SSH 命令删除旧文件
@@ -47,6 +48,7 @@ jobs:
           # username: ${{ secrets.SSH_USERNAME }}
           # ssh_private_key: ${{ secrets.KEY }}
           host: 103.255.203.166
+          port: 10022
           username: root
           password: wuxi@lianyun.cn
           local_path: './dist/*'
