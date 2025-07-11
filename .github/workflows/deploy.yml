@@ -3,7 +3,7 @@ name: 自动部署 # 步骤名称
 on:
   push:
     branches:
-      - master # 当 master 分支发生提交时触发
+      - main # 当 master 分支发生提交时触发
     # paths-ignore: # 避免这些文件改变时触发
     #   - README.md
     #   - LICENSE
@@ -35,7 +35,7 @@ jobs:
 
           # 先用 SSH 命令删除旧文件
           script: |
-            rm -rf /www/blog/*
+            rm -rf /usr/app/www/*
 
       - name: 部署到服务器
         uses: wlixcc/SFTP-Deploy-Action@v1.0 # 这个是sftp插件
