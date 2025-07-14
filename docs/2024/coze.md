@@ -427,11 +427,11 @@ module.exports = {
 
 [人生回忆录](https://www.holden.xin/#/coze-chat?bot_id=7445220533748334633)
 
-![人生回忆录](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze18.png)
+![人生回忆录](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze18.png)
 
 [奈小婉](https://www.holden.xin/#/coze-chat?bot_id=7443838573226262567)
 
-![奈小婉](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze19.png)
+![奈小婉](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze19.png)
 
 #### 2.3.4 小结
 
@@ -543,7 +543,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 使用效果如下：
 
-<img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze20.png" style="height:350px">
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze20.png" style="height:350px">
 
 :::danger 缺点
 触发器限制太多，仅适配自家飞书平台，不适用于外部调用
@@ -575,8 +575,8 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
   微信对消息弹窗是很敏感的，小程序/公众号/订阅号消息，都被限制得太多，已经无法有效通知了
 
-  <img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze21.png" style="border:1px solid #efefef;margin-top:10px;">
-  <img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze22.png" style="border:1px solid #efefef;">
+  <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze21.png" style="border:1px solid #efefef;margin-top:10px;">
+  <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze22.png" style="border:1px solid #efefef;">
 
 #### 2.5.3 小结
 
@@ -613,7 +613,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 `接入美团优惠券目前没有解决方案，并且入驻美团服务商的条件也非常高，不太建议`
 
-![美团](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze23.png)
+![美团](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze23.png)
 
 :::tip 相关需求点
 
@@ -713,7 +713,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 `小米的万能遥控`
 
-<img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze24.png" style="border:1px solid #efefef;height:350px">
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze24.png" style="border:1px solid #efefef;height:350px">
 
 ## 3. 总结
 
