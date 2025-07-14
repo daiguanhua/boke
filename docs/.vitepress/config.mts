@@ -31,6 +31,14 @@ export default defineConfig({
     ['meta', { name: 'referrer', content: 'no-referrer' }],
   ],
   vite: {
+    build: {
+      minify: 'esbuild',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
     server: {
       host: '0.0.0.0',
     },
