@@ -95,8 +95,8 @@ vite 官网：https://vitejs.cn
 <table>
   <tbody>
     <tr>
-      <td><img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes1.png" style="width:500px;height:280px;float:left" /></td>
-      <td><img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes2.png" style="width:500px;height:280px;" /></td>
+      <td><img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes1.png" style="width:500px;height:280px;float:left" /></td>
+      <td><img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes2.png" style="width:500px;height:280px;" /></td>
     </tr>
   </tbody>
 </table>
@@ -313,7 +313,7 @@ return {
           return Reflect.deleteProperty(target, prop)
         },
       })
-      
+
       proxy.name = 'tom'
       ```
 
@@ -351,7 +351,7 @@ return {
 
   ```js
   import {computed} from 'vue'
-  
+
   setup(){
       ...
   	//计算属性——简写
@@ -390,12 +390,12 @@ return {
     },
     { immediate: true }
   )
-  
+
   //情况二：监视多个ref定义的响应式数据
   watch([sum, msg], (newValue, oldValue) => {
     console.log('sum或msg变化了', newValue, oldValue)
   })
-  
+
   /* 情况三：监视reactive定义的响应式数据
   			若watch监视的是reactive定义的响应式数据，则无法正确获得oldValue！！
   			若watch监视的是reactive定义的响应式数据，则强制开启了深度监视 
@@ -407,7 +407,7 @@ return {
     },
     { immediate: true, deep: false }
   ) //此处的deep配置不再奏效
-  
+
   //情况四：监视reactive定义的响应式数据中的某个属性
   watch(
     () => person.job,
@@ -416,7 +416,7 @@ return {
     },
     { immediate: true, deep: true }
   )
-  
+
   //情况五：监视reactive定义的响应式数据中的某些属性
   watch(
     [() => person.job, () => person.name],
@@ -425,7 +425,7 @@ return {
     },
     { immediate: true, deep: true }
   )
-  
+
   //特殊情况
   watch(
     () => person.job,
@@ -463,8 +463,8 @@ return {
 <table>
   <tbody>
     <tr>
-      <td><img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes3.png" />vue 2 生命周期</td>
-      <td><img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes4.jpg" />vue 3 生命周期</td>
+      <td><img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes3.png" />vue 2 生命周期</td>
+      <td><img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes4.jpg" />vue 3 生命周期</td>
     </tr>
   </tbody>
 </table>
@@ -540,7 +540,7 @@ return {
     <input type="text" v-model="keyword" />
     <h3>{{ keyword }}</h3>
   </template>
-  
+
   <script>
   import { ref, customRef } from 'vue'
   export default {
@@ -578,7 +578,7 @@ return {
 
 ### 12.5 provide 与 inject
 
-<img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes5.png" style="width:300px" />
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes5.png" style="width:300px" />
 
 - 作用：实现 `祖与后代组件间` 通信
 
@@ -621,15 +621,15 @@ return {
 
 使用传统 OptionsAPI 中，新增或者修改一个需求，就需要分别在 data，methods，computed 里修改 。
 
-<img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes6.gif" style="width:560px;left" />
-<img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes7.gif" style="zoom:50%;width:560px;left" />
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes6.gif" style="width:560px;left" />
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes7.gif" style="zoom:50%;width:560px;left" />
 
 ### 13.2 Composition API 的优势
 
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
 
-<img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes8.gif" style="width:420px;left" />
-<img src="https://gitee.com/dai-guanhua/pic-go/blob/master/img/2021/vue3-nodes/vue3-nodes9.gif" style="width:420px;left" />
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes8.gif" style="width:420px;left" />
+<img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2021/vue3-nodes/vue3-nodes9.gif" style="width:420px;left" />
 
 ## 14. 新的组件
 
@@ -703,7 +703,7 @@ return {
       }),
       template: '<button @click="count++">Clicked {{ count }} times.</button>'
     })
-  
+
     //注册全局指令
     Vue.directive('focus', {
       inserted: el => el.focus()
