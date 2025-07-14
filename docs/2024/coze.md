@@ -53,11 +53,11 @@ coze agent 支持分配不同的大语言模型，处理问题时，可采用合
 import Card from '../.vitepress/components/Card.vue'
 import { NH3, NTabs, NTabPane } from 'naive-ui'
 const cozeModuleData = [
-  { text:'豆包',url:'/2024/coze/coze1.png',link:'https://www.volcengine.com/product/doubao'},
-  { text:'通义千问',url:'/2024/coze/coze2.png',link:'https://dundunlu.com/web/tongyi/'},
-  { text:'GLM-4',url:'/2024/coze/coze3.png',link:'https://chatglm.cn/'},
-  { text:'MiniMax',url:'/2024/coze/coze4.png',link:'https://www.minimaxi.com/'},
-  { text:'Kimi',url:'/2024/coze/coze5.png',link:'https://www.minimaxi.com/'},
+  { text:'豆包',url:'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze1.png',link:'https://www.volcengine.com/product/doubao'},
+  { text:'通义千问',url:'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze2.png',link:'https://dundunlu.com/web/tongyi/'},
+  { text:'GLM-4',url:'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze3.png',link:'https://chatglm.cn/'},
+  { text:'MiniMax',url:'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze4.png',link:'https://www.minimaxi.com/'},
+  { text:'Kimi',url:'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze5.png',link:'https://www.minimaxi.com/'},
 ]
 </script>
 
@@ -73,9 +73,9 @@ const cozeModuleData = [
 
 - 应用：应用是指利用大模型技术开发的应用程序。扣子中搭建的 AI 应用具备完整业务逻辑和可视化用户界面，是一个独立的 AI 项目。通过扣子开发的 AI 应用有明确的输入和输出，可以根据既定的业务逻辑和流程完成一系列简单或复杂的任务，例如 AI 搜索、翻译工具、饮食记录等。
 
-![创建](../img/2024/coze/coze7.png)
+![创建](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze7.png)
 
-![工作空间](../img/2024/coze/coze6.png)
+![工作空间](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze6.png)
 
 ### 1.4 Coze 智能体配置介绍
 
@@ -83,7 +83,7 @@ const cozeModuleData = [
 
 新建智能体后，在控制台可配置智能体，智能体控制台分3个部分
 
-![配置](../img/2024/coze/coze8.png)
+![配置](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze8.png)
 
 - 人设和回复逻辑
 
@@ -119,7 +119,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 `PS：首次使用飞书插件时，会提示需要授权，此时agent会给出飞书授权链接，点击链接进行授权即可。`
 
-![飞书插件](../img/2024/coze/coze9.png)
+![飞书插件](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze9.png)
 
 #### 2.1.1 实现方式调研
 
@@ -151,7 +151,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 - 按照查询逻辑，新建节点并连接，如下图所示：
 
-![工作流](../img/2024/coze/coze10.png)
+![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze10.png)
 
 - 节点说明
 
@@ -159,22 +159,22 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
   <n-tab-pane name="chap1" tab="节点一">
     这个是工作流开始节点，默认传入用户的问题文本，此外可以新建变量，让agent传入指定数据
     <br><br>此处是让agent从用户文本中解析出手机号，利用手机号查询用户信息
-    <img src="../img/2024/coze/coze11.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze11.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap2" tab="节点二">
     查询飞书表格数据，将内容传至下一个节点
     <br><br>传入飞书链接文档即可，授权后无需设定公开
-    <img src="../img/2024/coze/coze12.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze12.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap3" tab="节点三">
     代码过滤数据，此处是优化项，可有可无，主要是为了优化token使用数量。经过此代码优化后，token消耗可减少约70%。
     <br><br>此处作用是从数据中过滤空值对象。
-    <img src="../img/2024/coze/coze13-2.png" style="margin-top:10px;width:100%" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13-2.png" style="margin-top:10px;width:100%" />
   </n-tab-pane>
   <n-tab-pane name="chap4" tab="节点四">
     利用prompt，提取所需数据。前面节点的数据，此处均可直接使用。
     <br><br>传入飞书数据后，可通过此处配置节点prompt，提取所需数据。
-    <img src="../img/2024/coze/coze13.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap5" tab="节点五">
     输出结果
@@ -184,7 +184,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 #### 2.1.3 测试效果
 
-![工作流](../img/2024/coze/coze14.png)
+![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze14.png)
 
 #### 2.1.4 小结
 
@@ -252,7 +252,7 @@ coze官方提供了HTTP请求插件，可以直接调用API接口，实现接口
 
 - 新建工作流：make_card
 
-  ![工作流](../img/2024/coze/coze15.png)
+  ![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze15.png)
 
 - 搭建后端服务接口
 
@@ -260,10 +260,10 @@ coze官方提供了HTTP请求插件，可以直接调用API接口，实现接口
 
   <n-tabs type="segment" animated>
     <n-tab-pane name="chap1" tab="对话一">
-      <img src="../img/2024/coze/coze16.png" style="margin-top:10px;" />
+      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze16.png" style="margin-top:10px;" />
     </n-tab-pane>
     <n-tab-pane name="chap2" tab="对话二">
-      <img src="../img/2024/coze/coze17.png" style="margin-top:10px;" />
+      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze17.png" style="margin-top:10px;" />
     </n-tab-pane>
   </n-tabs>
 
@@ -427,11 +427,11 @@ module.exports = {
 
 [人生回忆录](https://www.holden.xin/#/coze-chat?bot_id=7445220533748334633)
 
-![人生回忆录](../img/2024/coze/coze18.png)
+![人生回忆录](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze18.png)
 
 [奈小婉](https://www.holden.xin/#/coze-chat?bot_id=7443838573226262567)
 
-![奈小婉](../img/2024/coze/coze19.png)
+![奈小婉](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze19.png)
 
 #### 2.3.4 小结
 
@@ -543,7 +543,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 使用效果如下：
 
-<img src="../img/2024/coze/coze20.png" style="height:350px">
+<img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze20.png" style="height:350px">
 
 :::danger 缺点
 触发器限制太多，仅适配自家飞书平台，不适用于外部调用
@@ -575,8 +575,8 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
   微信对消息弹窗是很敏感的，小程序/公众号/订阅号消息，都被限制得太多，已经无法有效通知了
 
-  <img src="../img/2024/coze/coze21.png" style="border:1px solid #efefef;margin-top:10px;">
-  <img src="../img/2024/coze/coze22.png" style="border:1px solid #efefef;">
+  <img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze21.png" style="border:1px solid #efefef;margin-top:10px;">
+  <img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze22.png" style="border:1px solid #efefef;">
 
 #### 2.5.3 小结
 
@@ -613,7 +613,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 `接入美团优惠券目前没有解决方案，并且入驻美团服务商的条件也非常高，不太建议`
 
-![美团](../img/2024/coze/coze23.png)
+![美团](../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze23.png)
 
 :::tip 相关需求点
 
@@ -713,7 +713,7 @@ coze提供了 `触发器` 功能，允许用户在与智能体对话过程中，
 
 `小米的万能遥控`
 
-<img src="../img/2024/coze/coze24.png" style="border:1px solid #efefef;height:350px">
+<img src="../imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze24.png" style="border:1px solid #efefef;height:350px">
 
 ## 3. 总结
 

@@ -85,11 +85,31 @@ pnpm docs:build
 <script setup>
 import Card from '../.vitepress/components/Card.vue'
 const cozeModuleData = [
-  { text: '豆包', url: '/2024/coze/coze1.png', link: 'https://www.volcengine.com/product/doubao' },
-  { text: '通义千问', url: '/2024/coze/coze2.png', link: 'https://dundunlu.com/web/tongyi/' },
-  { text: 'GLM-4', url: '/2024/coze/coze3.png', link: 'https://chatglm.cn/' },
-  { text: 'MiniMax', url: '/2024/coze/coze4.png', link: 'https://www.minimaxi.com/' },
-  { text: 'Kimi', url: '/2024/coze/coze5.png', link: 'https://www.minimaxi.com/' },
+  {
+    text: '豆包',
+    url: 'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze1.png',
+    link: 'https://www.volcengine.com/product/doubao',
+  },
+  {
+    text: '通义千问',
+    url: 'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze2.png',
+    link: 'https://dundunlu.com/web/tongyi/',
+  },
+  {
+    text: 'GLM-4',
+    url: 'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze3.png',
+    link: 'https://chatglm.cn/',
+  },
+  {
+    text: 'MiniMax',
+    url: 'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze4.png',
+    link: 'https://www.minimaxi.com/',
+  },
+  {
+    text: 'Kimi',
+    url: 'https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze5.png',
+    link: 'https://www.minimaxi.com/',
+  },
 ]
 </script>
 
@@ -118,7 +138,7 @@ const cozeModuleData = [
 import PhotoGroup from '../.vitepress/components/PhotoGroup.vue'
 <script />
 
-<PhotoGroup :images="['/2025/changsha_travel/changsha_travel1.jpg']" />
+<PhotoGroup :images="['https://gitee.com/dai-guanhua/pic-go/raw/master/img/2025/changsha_travel/changsha_travel1.jpg']" />
 ```
 
 - 效果图

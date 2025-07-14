@@ -26,7 +26,10 @@ export default defineConfig({
   title: '可否许我再少年',
   description: '快不快乐有天总过去',
   lang: 'zh-CN',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'referrer', content: 'no-referrer' }],
+  ],
   vite: {
     server: {
       host: '0.0.0.0',

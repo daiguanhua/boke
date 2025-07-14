@@ -28,7 +28,7 @@ const getImageUrl = async (name: string) => {
       console.error('导入图片失败:', err)
     }
   } else {
-    console.error('图片未找到:', name)
+    return name || ''
   }
   return ''
 }
