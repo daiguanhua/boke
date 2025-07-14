@@ -485,7 +485,7 @@ module.exports = {
 测试效果：
 
 <video controls style="height:350px;width:100%;">
-  <source src="/assets/coze/coze-chat.mp4" type="video/mp4" />
+  <!-- <source src="/assets/coze/coze-chat.mp4" type="video/mp4" /> -->
   您的浏览器不支持 video 标签。
 </video>
 
@@ -505,7 +505,7 @@ WorkBot 是一款安全稳定零封号的微信/企微RPA机器人，支持通�
 - 采用 Google 安卓系统的 官方无障碍服务，并在此基础上 自研自动化框架，无 hook 函数、无侵入、无破坏、无内存修改，兼容绝大部分机型，`支持长时间运行稳定`
 - 支持数据独立隔离，定制更高级数据的安全方案
 
-<img src="/assets/coze/sendMessage.gif" style="height:350px">
+<!-- <img src="/assets/coze/sendMessage.gif" style="height:350px"> -->
 
 #### 2.4.4 小结
 
