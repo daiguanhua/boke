@@ -73,9 +73,9 @@ const cozeModuleData = [
 
 - 应用：应用是指利用大模型技术开发的应用程序。扣子中搭建的 AI 应用具备完整业务逻辑和可视化用户界面，是一个独立的 AI 项目。通过扣子开发的 AI 应用有明确的输入和输出，可以根据既定的业务逻辑和流程完成一系列简单或复杂的任务，例如 AI 搜索、翻译工具、饮食记录等。
 
-![创建](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze7.png)
+![创建](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze7.png)
 
-![工作空间](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze6.png)
+![工作空间](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze6.png)
 
 ### 1.4 Coze 智能体配置介绍
 
@@ -83,7 +83,7 @@ const cozeModuleData = [
 
 新建智能体后，在控制台可配置智能体，智能体控制台分3个部分
 
-![配置](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze8.png)
+![配置](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze8.png)
 
 - 人设和回复逻辑
 
@@ -119,7 +119,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 `PS：首次使用飞书插件时，会提示需要授权，此时agent会给出飞书授权链接，点击链接进行授权即可。`
 
-![飞书插件](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze9.png)
+![飞书插件](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze9.png)
 
 #### 2.1.1 实现方式调研
 
@@ -151,7 +151,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 - 按照查询逻辑，新建节点并连接，如下图所示：
 
-![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze10.png)
+![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze10.png)
 
 - 节点说明
 
@@ -159,22 +159,22 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
   <n-tab-pane name="chap1" tab="节点一">
     这个是工作流开始节点，默认传入用户的问题文本，此外可以新建变量，让agent传入指定数据
     <br><br>此处是让agent从用户文本中解析出手机号，利用手机号查询用户信息
-    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze11.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze11.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap2" tab="节点二">
     查询飞书表格数据，将内容传至下一个节点
     <br><br>传入飞书链接文档即可，授权后无需设定公开
-    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze12.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze12.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap3" tab="节点三">
     代码过滤数据，此处是优化项，可有可无，主要是为了优化token使用数量。经过此代码优化后，token消耗可减少约70%。
     <br><br>此处作用是从数据中过滤空值对象。
-    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13-2.png" style="margin-top:10px;width:100%" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13-2.png" style="margin-top:10px;width:100%" />
   </n-tab-pane>
   <n-tab-pane name="chap4" tab="节点四">
     利用prompt，提取所需数据。前面节点的数据，此处均可直接使用。
     <br><br>传入飞书数据后，可通过此处配置节点prompt，提取所需数据。
-    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13.png" style="margin-top:10px;" />
+    <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze13.png" style="margin-top:10px;" />
   </n-tab-pane>
   <n-tab-pane name="chap5" tab="节点五">
     输出结果
@@ -184,7 +184,7 @@ coze官方提供了飞书大量的插件，可以实现飞书应用大部分的�
 
 #### 2.1.3 测试效果
 
-![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze14.png)
+![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze14.png)
 
 #### 2.1.4 小结
 
@@ -252,7 +252,7 @@ coze官方提供了HTTP请求插件，可以直接调用API接口，实现接口
 
 - 新建工作流：make_card
 
-  ![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze15.png)
+  ![工作流](https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze15.png)
 
 - 搭建后端服务接口
 
@@ -260,10 +260,10 @@ coze官方提供了HTTP请求插件，可以直接调用API接口，实现接口
 
   <n-tabs type="segment" animated>
     <n-tab-pane name="chap1" tab="对话一">
-      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze16.png" style="margin-top:10px;" />
+      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze16.png" style="margin-top:10px;" />
     </n-tab-pane>
     <n-tab-pane name="chap2" tab="对话二">
-      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/imghttps://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze17.png" style="margin-top:10px;" />
+      <img src="https://gitee.com/dai-guanhua/pic-go/raw/master/img/2024/coze/coze17.png" style="margin-top:10px;" />
     </n-tab-pane>
   </n-tabs>
 
