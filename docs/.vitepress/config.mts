@@ -49,20 +49,20 @@ export default defineConfig({
       }),
       groupIconVitePlugin(),
       HeaderPlugin(),
-      viteCompression({
-        verbose: true,
-        disable: false,
-        threshold: 10240,
-        algorithm: 'gzip',
-        ext: '.gz',
-      }),
-      viteCompression({
-        verbose: true,
-        disable: false,
-        threshold: 10240,
-        algorithm: 'brotliCompress',
-        ext: '.br',
-      }),
+      // viteCompression({
+      //   verbose: true,
+      //   disable: false,
+      //   threshold: 10240,
+      //   algorithm: 'gzip',
+      //   ext: '.gz',
+      // }),
+      // viteCompression({
+      //   verbose: true,
+      //   disable: false,
+      //   threshold: 10240,
+      //   algorithm: 'brotliCompress',
+      //   ext: '.br',
+      // }),
       viteImagemin({
         gifsicle: {
           optimizationLevel: 7,
