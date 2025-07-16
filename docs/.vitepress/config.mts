@@ -4,7 +4,7 @@ import { generateSidebar } from 'vitepress-sidebar'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { HeaderPlugin } from './plugins/headerPlugin'
 import viteImagemin from 'vite-plugin-imagemin'
-import viteCompression from 'vite-plugin-compression'
+// import viteCompression from 'vite-plugin-compression'
 import path from 'path'
 const fileAndStyles: Record<string, string> = {}
 
