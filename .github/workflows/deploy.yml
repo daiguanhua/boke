@@ -1,55 +1,99 @@
+# name: 自动部署 # 步骤名称
+
+# on:
+#   push:
+#     branches:
+#       - main # 当 master 分支发生提交时触发
+#     # paths-ignore: # 避免这些文件改变时触发
+#     #   - README.md
+#     #   - LICENSE
+#     paths: # 指定哪些文件改变时触发
+#       - docs/**
+#       - package.json
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest # 指定用什么版本服务器来执行
+
+#     steps:
+#       - name: 拉取代码
+#         uses: actions/checkout@v2
+
+#       - name: 安装依赖
+#         run: npm i
+
+#       - name: 编译构建
+#         run: npm run build
+
+#       - name: SSH 命令删除旧文件
+#         uses: appleboy/ssh-action@master
+#         with:
+#           # 这里配置对应仓库设置的变量，就可以避免服务器配置暴露
+#           # host: ${{ secrets.SSH_HOST }}
+#           # username: ${{ secrets.SSH_USERNAME }}
+#           # key: ${{ secrets.KEY }}
+#           # password: ${{ secrets.KEY }}
+#           host: ${{ secrets.SSH_HOST }}
+#           port: ${{ secrets.SSH_PORT }}
+#           username: root
+#           password: ${{ secrets.SSH_POSSWORD }}
+#           # 先用 SSH 命令删除旧文件
+#           script: |
+#             rm -rf /usr/app/www/*
+
+#       - name: 部署到服务器
+#         uses: wlixcc/SFTP-Deploy-Action@v1.2.4 # 这个是sftp插件
+#         with:
+#           # server: ${{ secrets.SSH_HOST }}
+#           # username: ${{ secrets.SSH_USERNAME }}
+#           # ssh_private_key: ${{ secrets.KEY }}
+#           server: ${{ secrets.SSH_HOST }}
+#           port: ${{ secrets.SSH_PORT }}
+#           username: root
+#           password: ${{ secrets.SSH_POSSWORD }}
+#           local_path: './docs/.vitepress/dist/*'
+#           remote_path: '/usr/app/www/'
+
 name: 自动部署 # 步骤名称
 
 on:
   push:
     branches:
-      - main # 当 master 分支发生提交时触发
-    # paths-ignore: # 避免这些文件改变时触发
-    #   - README.md
-    #   - LICENSE
-    paths: # 指定哪些文件改变时触发
-      - docs/**
-      - package.json
-
+      - main
 jobs:
-  deploy:
-    runs-on: ubuntu-latest # 指定用什么版本服务器来执行
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [20]
 
     steps:
-      - name: 拉取代码
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: 安装依赖
-        run: npm i
-
-      - name: 编译构建
-        run: npm run build
-
-      - name: SSH 命令删除旧文件
-        uses: appleboy/ssh-action@master
+      - name: Set node version to ${{ matrix.node }}
+        uses: actions/setup-node@v4
         with:
-          # 这里配置对应仓库设置的变量，就可以避免服务器配置暴露
-          # host: ${{ secrets.SSH_HOST }}
-          # username: ${{ secrets.SSH_USERNAME }}
-          # key: ${{ secrets.KEY }}
-          # password: ${{ secrets.KEY }}
-          host: ${{ secrets.SSH_HOST }}
-          port: ${{ secrets.SSH_PORT }}
-          username: root
-          password: ${{ secrets.SSH_POSSWORD }}
-          # 先用 SSH 命令删除旧文件
-          script: |
-            rm -rf /usr/app/www/*
+          node-version: ${{ matrix.node }}
 
-      - name: 部署到服务器
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4 # 这个是sftp插件
-        with:
-          # server: ${{ secrets.SSH_HOST }}
-          # username: ${{ secrets.SSH_USERNAME }}
-          # ssh_private_key: ${{ secrets.KEY }}
-          server: ${{ secrets.SSH_HOST }}
-          port: ${{ secrets.SSH_PORT }}
-          username: root
-          password: ${{ secrets.SSH_POSSWORD }}
-          local_path: './docs/.vitepress/dist/*'
-          remote_path: '/usr/app/www/'
+      - run: corepack enable
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
+      - name: Build
+        run: nr build
+
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v2.1.6
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY}}
+          ARGS: '-avzr --delete'
+          SOURCE: 'build/'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_USER: 'root'
+          TARGET: '/usr/app/www/'
