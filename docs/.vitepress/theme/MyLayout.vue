@@ -85,11 +85,11 @@ loadVerCount()
       <div style="margin-top: 24px">
         <Giscus
           :key="page.filePath"
-          repo="holden526/blog"
-          repo-id="R_kgDONLMmMw"
+          repo="daiguanhua/boke"
+          repo-id="R_kgDOPKmj0A"
           category="Announcements"
-          category-id="DIC_kwDONLMmM84CkKCl"
-          mapping="title"
+          category-id="DIC_kwDOPKmj0M4CtBa"
+          mapping="url"
           strict="0"
           reactions-enabled="1"
           emit-metadata="0"

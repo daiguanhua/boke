@@ -1575,11 +1575,11 @@ const { page } = useData()
         <div style="margin-top: 24px">
           <Giscus
             :key="page.filePath"
-            repo="holden526/vitepress-blog-template"
-            repo-id="R_kgDONRAkeA"
+            repo="daiguanhua/boke"
+            repo-id="R_kgDOPKmj0A"
             category="Announcements"
-            category-id="IC_kwDONRAkeM4CkXRA"
-            mapping="title"
+            category-id="DIC_kwDOPKmj0M4CtBa"
+            mapping="url"
             strict="0"
             reactions-enabled="1"
             emit-metadata="0"
