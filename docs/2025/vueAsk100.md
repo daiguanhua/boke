@@ -398,7 +398,7 @@ tags:
 >   如果更改assetsSubDirectory的值为assets，那么路径需更改为：/assets/[filename]。
 > - assets
 >   - 在vue组件中，所有模板和css都会被vue-html-loader和css-loader解析，并查找资源url。
->     例：<img src="./logo.png" /> 或者 background: url("./logo.png")
+>     例： 或者 background: url("./logo.png")
 >     　　因为./logo.png是相对的资源路径，将会由webpack解析为模块依赖；
 >   - 由于logo.png不是js，当被视作模块依赖时，需要使用url-loader和file-loader处理它，vue-cli已经配好了这些loader（webpack）因此可以使用相对/模块路径。
 >   - 由于这些资源可能在构建过程中被内联、复制、重命名，所以它们基本是代码的一部分，即webpack处理的静态资源放在/src目录中，和其它资源文件放在一起。
