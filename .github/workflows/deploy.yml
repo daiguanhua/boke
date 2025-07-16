@@ -97,5 +97,3 @@ jobs:
           REMOTE_PORT: ${{ secrets.SSH_PORT }}
           REMOTE_USER: 'root'
           TARGET: '/usr/app/www/'
-          SCRIPT_BEFORE: |
-            apt-get install rsync
